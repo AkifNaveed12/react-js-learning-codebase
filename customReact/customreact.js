@@ -14,14 +14,20 @@ function customRender(reactElement, mainContainer){
     //creating an element (currently empty)
     const domElement = document.createElement(reactElement.type)
 
-    //adding inner html in domElement
+    // adding inner html in domElement
     domElement.innerHTML = reactElement.child
 
-    //setting attributes
-    domElement.setAttribute('href', reactElement.props.href)
-    domElement.setAttribute('target', reactElement.props.target)
+    // //setting attributes
+    // domElement.setAttribute('href', reactElement.props.href)
+    // domElement.setAttribute('target', reactElement.props.target)
 
-    //adding the domelement in the root div
+    // //adding the domelement in the root div
+
+    //version 2: better code 
+    for (const prop in reactElement.props) {
+        if (prop === 'childern') continue;
+        domElement.setAttribute(prop, reactElement.props[prop])
+    }
     mainContainer.appendChild(domElement)
 }
 
