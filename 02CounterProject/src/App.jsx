@@ -1,17 +1,31 @@
 import { useState } from 'react'
 import './App.css'
 
+// now according to the task the value of the counter cant exceed 20 adn cant be less than 0 (-ve)
 function App() {
 
   let [counter, setCounter] = useState(0);
   const addValue = () => {
-    console.log("clicked", counter)
-    counter = counter +1
-    setCounter(counter)
+    
+    if(counter >= 20){
+      counter = 20
+      setCounter(counter)
+      console.log(`above 20 not allowed!`)
+    }
+    else{
+      setCounter(counter + 1)
+    }
   }
 
   const removeValue = () =>{
-    setCounter(counter -1)
+    if(counter <= 0){
+      counter = 0
+      setCounter(counter)
+      console.log(`below 0 not allowed!`)
+    }
+    else{
+      setCounter(counter - 1)
+    }
   }
 
   return (
