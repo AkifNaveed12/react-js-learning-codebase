@@ -1,11 +1,12 @@
 import Chai from "./chai"
 function App() {
-
+  const username = "akif"
   return (
+
     <>
     <Chai />
     <App />
-    {/* <p>just testing </p> */}
+    { <p>just testing {username} </p>} /* evaluaed expression-evaluated js code  */
     </>
     
   )
