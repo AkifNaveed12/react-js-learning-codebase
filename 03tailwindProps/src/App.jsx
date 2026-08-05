@@ -4,6 +4,7 @@ import Card from './components/card'
 import Compprac from './components/compprac'
 import Multiplepropsprac from './components/multiplepropsprac'
 import Objectprops from './components/objectprops'
+import Destructureprop from './components/destructureprop'
 
 
 const myObj = {
@@ -21,6 +22,7 @@ export default function App(props) {
   console.log(props)
   return (
     <>
+    <Destructureprop student={student}/>
     <Objectprops student={student}/>
     <Multiplepropsprac name ="Azhar ali" age={20} city ="lahore"/>
     <Compprac name="Akif"/>
