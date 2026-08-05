@@ -5,7 +5,8 @@ import Compprac from './components/compprac'
 import Multiplepropsprac from './components/multiplepropsprac'
 import Objectprops from './components/objectprops'
 import Destructureprop from './components/destructureprop'
-
+import reptile from "./images/contemplative-reptile.jpg";
+import Imgprop from './components/imgprop'
 
 const myObj = {
   username: "Akif",
@@ -20,8 +21,10 @@ const student={
 
 export default function App(props) {
   console.log(props)
+
   return (
     <>
+    <Imgprop image={reptile} name="akif"/>
     <Destructureprop student={student}/>
     <Objectprops student={student}/>
     <Multiplepropsprac name ="Azhar ali" age={20} city ="lahore"/>
