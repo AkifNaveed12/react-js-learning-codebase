@@ -16,7 +16,7 @@ import LoopRoundedIcon from "@mui/icons-material/LoopRounded";
 import reptile from "../images/contemplative-reptile.jpg";
 
 
-const   MusicCard = (props) => {
+const   MusicCard = ({channel, myObj}) => {
     const [paused, setPaused] = useState(false);
     return (
         <div>
@@ -43,6 +43,17 @@ const   MusicCard = (props) => {
         <Typography sx={{ color: 'text.primary', fontWeight: 'semiBold' }}>
         Contemplative Reptile
         </Typography>
+        <Typography variant="h6">
+    {channel}
+</Typography>
+
+<Typography>
+    {myObj?.username}
+</Typography>
+
+<Typography>
+    {myObj?.age}
+</Typography>
         <Typography
         variant="caption"
         sx={{ color: 'text.secondary', fontWeight: 'medium', textAlign: 'center', width: '100%' }}
@@ -75,6 +86,7 @@ const   MusicCard = (props) => {
 </Card>
 
 </div>
+
     );
 }
 
