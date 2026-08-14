@@ -5,8 +5,7 @@ A simple and functional Todo application built with **React.js** to practice and
 The project allows users to create, edit, delete, and mark todos as completed. Todos are persisted in the browser using Local Storage, so they remain available after refreshing the page.
 
 ## 🎥 Demo
-
-<!-- Add your GitHub video attachment here -->
+https://github.com/user-attachments/assets/979b8a5a-5405-48e3-9fa1-de7945bfbd59
 
 ## ✨ Features
 
